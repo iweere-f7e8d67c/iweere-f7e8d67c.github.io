@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日大赛主题大赛寸止挑战在线观看-挑战类型_观看场景_参赛选择</title>
+  <meta name="description" content="每日大赛主题大赛寸止挑战在线观看，提供各类挑战赛事的分类索引、参赛指南与观看入口。适合想找每日主题挑战、了解寸止挑战规则及寻找在线观看渠道的用户浏览参考。">
+  <meta name="keywords" content="每日挑战赛,寸止挑战规则,主题大赛观看,在线挑战赛程,赛事类型指南">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Cpath d='M10 22L16 8l6 14h-3l-3-7-3 7z' fill='%23fbbf24'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --ink: #0f172a;
+      --ink-secondary: #334155;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --brand: #0f172a;
+      --accent: #f59e0b;
+      --accent-soft: #fef3c7;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,.07);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --announce-h: 36px;
+      --header-h: 64px;
+      --sticky-offset: calc(var(--announce-h) + var(--header-h) + 12px);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+      color: #fbbf24;
+      height: var(--announce-h);
+      display: flex; align-items: center;
+      font-size: 13px;
+      overflow: hidden;
+    }
+    .announce-bar .container { display: flex; align-items: center; gap: 12px; white-space: nowrap; overflow: hidden; }
+    .announce-bar .tag { background: #fbbf24; color: #0f172a; padding: 1px 8px; border-radius: 999px; font-weight: 700; font-size: 11px; letter-spacing: .5px; }
+    .announce-bar span { overflow: hidden; text-overflow: ellipsis; }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: sticky; top: var(--announce-h); z-index: 99;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      height: var(--header-h);
+    }
+    .site-header .container { display: flex; align-items: center; height: 100%; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .brand-mark { width: 34px; height: 34px; background: var(--brand); border-radius: 9px; display: flex; align-items: center; justify-content: center; }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .brand-text { font-weight: 800; font-size: 17px; letter-spacing: -.3px; color: var(--ink); white-space: nowrap; }
+    .header-nav { display: flex; gap: 22px; font-size: 14px; color: var(--ink-secondary); overflow-x: auto; scrollbar-width: none; }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a { white-space: nowrap; padding: 4px 0; border-bottom: 2px solid transparent; }
+    .header-nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .header-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+    .search-mini { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; background: var(--bg); gap: 6px; }
+    .search-mini input { border: none; background: transparent; outline: none; font-size: 13px; width: 110px; color: var(--ink); }
+    .search-mini input::placeholder { color: var(--muted); }
+    .search-mini button { border: none; background: transparent; cursor: pointer; color: var(--muted); font-size: 14px; padding: 0; line-height: 1; }
+    .btn-ghost { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 6px 16px; font-size: 13px; cursor: pointer; color: var(--ink-secondary); white-space: nowrap; }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #292524 100%);
+      color: #f8fafc;
+      padding: 48px 0 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute; right: -80px; top: -80px; width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(251,191,36,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(251,191,36,.15); color: #fbbf24; border: 1px solid rgba(251,191,36,.3); border-radius: 999px; padding: 4px 14px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }
+    .hero h1 { font-size: 32px; line-height: 1.3; font-weight: 800; letter-spacing: -.5px; margin-bottom: 14px; }
+    .hero p { color: #cbd5e1; font-size: 15px; max-width: 580px; margin-bottom: 22px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: #0f172a; padding: 10px 24px; border-radius: 999px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary:hover { background: #d97706; }
+    .btn-outline-light { border: 1px solid rgba(255,255,255,.25); color: #f8fafc; padding: 10px 24px; border-radius: 999px; font-weight: 500; font-size: 14px; background: transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-outline-light:hover { background: rgba(255,255,255,.08); }
+    .hero-visual { display: flex; flex-direction: column; gap: 10px; }
+    .hero-stat-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(4px); }
+    .hero-stat-card .label { font-size: 13px; color: #94a3b8; }
+    .hero-stat-card .value { font-size: 20px; font-weight: 800; color: #fbbf24; }
+    .hero-stat-card .value small { font-size: 12px; font-weight: 400; color: #64748b; margin-left: 4px; }
+
+    /* 三栏主结构 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 240px;
+      gap: 28px;
+      padding: 32px 0 48px;
+      align-items: start;
+    }
+
+    /* 左栏 */
+    .left-sidebar { position: sticky; top: var(--sticky-offset); display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-block { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px; }
+    .sidebar-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); margin-bottom: 12px; }
+    .channel-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .channel-list a { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 6px; font-size: 13.5px; color: var(--ink-secondary); transition: background .15s; }
+    .channel-list a:hover { background: var(--accent-soft); color: var(--ink); }
+    .channel-list a .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .filter-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .filter-tags button { border: 1px solid var(--line); background: var(--bg); border-radius: 999px; padding: 4px 12px; font-size: 12px; cursor: pointer; color: var(--ink-secondary); transition: all .15s; }
+    .filter-tags button:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-tags button.active { background: var(--accent); border-color: var(--accent); color: #0f172a; font-weight: 600; }
+
+    /* 中栏 */
+    .center-content { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+    .content-section { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+    .section-title { font-size: 18px; font-weight: 700; letter-spacing: -.3px; display: flex; align-items: center; gap: 8px; }
+    .section-title::before { content: ''; width: 4px; height: 18px; background: var(--accent); border-radius: 2px; }
+    .section-more { font-size: 13px; color: var(--muted); }
+    .section-more:hover { color: var(--accent); }
+
+    /* 内容简介 */
+    .intro-text p { font-size: 14.5px; color: var(--ink-secondary); margin-bottom: 12px; line-height: 1.8; }
+    .intro-text p:last-child { margin-bottom: 0; }
+    .intro-text strong { color: var(--ink); }
+
+    /* 热门推荐卡片 */
+    .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .content-card { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px; transition: border-color .2s, box-shadow .2s; background: var(--bg); }
+    .content-card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+    .card-tag { font-size: 11px; background: var(--accent-soft); color: #92400e; padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+    .card-tag.type { background: #dbeafe; color: #1e40af; }
+    .content-card h3 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
+    .content-card .desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+    .card-meta { display: flex; gap: 14px; font-size: 11.5px; color: var(--muted); }
+    .card-meta span { display: flex; align-items: center; gap: 3px; }
+
+    /* 最新更新列表 */
+    .update-list { list-style: none; display: flex; flex-direction: column; }
+    .update-list li { display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 14px; }
+    .update-list li:last-child { border-bottom: none; }
+    .update-list .update-name { font-weight: 600; flex-shrink: 0; color: var(--ink); }
+    .update-list .update-name:hover { color: var(--accent); }
+    .update-list .update-summary { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .update-list .update-time { margin-left: auto; font-size: 12px; color: var(--muted); flex-shrink: 0; }
+
+    /* 分类入口 */
+    .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .category-item { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 16px 8px; border: 1px solid var(--line); border-radius: var(--radius-sm); text-align: center; transition: all .15s; background: var(--bg); }
+    .category-item:hover { border-color: var(--accent); background: var(--accent-soft); }
+    .category-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--panel); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .category-item span { font-size: 12.5px; font-weight: 500; color: var(--ink-secondary); }
+
+    /* 深度解析 */
+    .deep-dive h3 { font-size: 16px; font-weight: 700; margin: 20px 0 10px; color: var(--ink); }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p { font-size: 14px; color: var(--ink-secondary); margin-bottom: 12px; line-height: 1.8; }
+    .deep-dive ul { margin: 8px 0 14px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .deep-dive li { font-size: 14px; color: var(--ink-secondary); line-height: 1.7; }
+    .deep-dive li strong { color: var(--ink); }
+
+    /* 体验指南 */
+    .guide-steps { display: flex; flex-direction: column; gap: 12px; }
+    .guide-step { display: flex; gap: 14px; align-items: flex-start; }
+    .step-num { width: 26px; height: 26px; border-radius: 50%; background: var(--brand); color: #fbbf24; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .step-body h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .step-body p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    .faq-item { border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
+    .faq-item summary { padding: 12px 16px; font-size: 14px; font-weight: 600; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; background: var(--bg); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 18px; color: var(--muted); font-weight: 400; transition: transform .2s; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item[open] summary { border-bottom: 1px solid var(--line); }
+    .faq-answer { padding: 12px 16px; font-size: 13.5px; color: var(--ink-secondary); line-height: 1.7; }
+
+    /* 用户评论 */
+    .comment-list { display: flex; flex-direction: column; gap: 12px; }
+    .comment-item { display: flex; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .comment-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .avatar-sm { width: 32px; height: 32px; border-radius: 50%; background: var(--accent-soft); color: #92400e; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+    .comment-body .comment-author { font-size: 12.5px; font-weight: 600; color: var(--ink); }
+    .comment-body .comment-text { font-size: 13px; color: var(--ink-secondary); line-height: 1.6; margin-top: 2px; }
+
+    /* 相关资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 14px; }
+    .news-item { display: flex; gap: 14px; }
+    .news-date { font-size: 11.5px; color: var(--muted); white-space: nowrap; padding-top: 2px; flex-shrink: 0; width: 72px; }
+    .news-body h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .news-body p { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+    /* 相关推荐标签 */
+    .related-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .related-tags a { display: inline-block; padding: 6px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; color: var(--ink-secondary); background: var(--bg); transition: all .15s; }
+    .related-tags a:hover { border-color: var(--accent); background: var(--accent-soft); color: #92400e; }
+
+    /* 右栏 */
+    .right-sidebar { position: sticky; top: var(--sticky-offset); display: flex; flex-direction: column; gap: 20px; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .toc-list a { font-size: 13px; color: var(--muted); padding: 4px 8px; border-radius: 4px; display: block; border-left: 2px solid transparent; }
+    .toc-list a:hover { color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); }
+    .hot-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .hot-list li { display: flex; gap: 10px; align-items: baseline; font-size: 13px; }
+    .hot-list .rank { font-weight: 800; color: var(--accent); font-size: 12px; width: 16px; flex-shrink: 0; }
+    .hot-list .hot-title { color: var(--ink-secondary); line-height: 1.4; }
+    .hot-list .hot-title:hover { color: var(--accent); }
+    .hot-list .hot-count { margin-left: auto; font-size: 11px; color: var(--muted); flex-shrink: 0; }
+
+    /* 页尾 */
+    .site-footer { background: #0f172a; color: #94a3b8; padding: 40px 0 24px; margin-top: 16px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 28px; }
+    .footer-brand .brand-text { color: #f8fafc; font-size: 16px; }
+    .footer-brand p { font-size: 13px; color: #64748b; margin-top: 8px; line-height: 1.7; max-width: 320px; }
+    .footer-col h5 { font-size: 13px; font-weight: 700; color: #e2e8f0; margin-bottom: 12px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .footer-col a { font-size: 13px; color: #94a3b8; }
+    .footer-col a:hover { color: #fbbf24; }
+    .footer-bottom { border-top: 1px solid #1e293b; padding-top: 18px; font-size: 12px; color: #475569; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+    /* 无结果提示 */
+    .no-result { font-size: 14px; color: var(--muted); padding: 16px; text-align: center; display: none; }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-layout { grid-template-columns: 1fr; }
+      .left-sidebar, .right-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .hero .container { grid-template-columns: 1fr; gap: 24px; }
+      .hero-visual { flex-direction: row; flex-wrap: wrap; }
+      .hero-stat-card { flex: 1; min-width: 140px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .category-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .header-nav { display: none; }
+      .search-mini { display: none; }
+      .hero h1 { font-size: 24px; }
+      .hero { padding: 32px 0; }
+      .main-layout { padding: 20px 0 32px; gap: 20px; }
+      .left-sidebar, .right-sidebar { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      .section-header { flex-wrap: wrap; gap: 6px; }
+      .update-list .update-summary { display: none; }
+      .update-list li { gap: 8px; }
+      .update-list .update-time { margin-left: auto; }
+      .container { padding: 0 14px; }
+      .content-section { padding: 18px; }
+      .news-item { flex-direction: column; gap: 4px; }
+      .news-date { width: auto; }
+    }
+    @media (max-width: 360px) {
+      .hero h1 { font-size: 20px; }
+      .brand-text { font-size: 14px; }
+    }
+    /* focus 可见 */
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar">
+    <div class="container">
+      <span class="tag">公告</span>
+      <span>本周新增 6 场主题挑战赛 · 寸止挑战规则更新 · 在线观看通道已开放</span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 22L16 8l6 14h-3l-3-7-3 7z" fill="#fbbf24"/>
+          </svg>
+        </div>
+        <span class="brand-text">每日大赛主题大赛寸止挑战在线观看</span>
+      </div>
+      <nav class="header-nav" aria-label="主题导航">
+        <a href="/#section-intro">赛事简介</a>
+        <a href="/#section-hot">热门挑战</a>
+        <a href="/#section-updates">最新动态</a>
+        <a href="/#section-categories">分类入口</a>
+        <a href="/#section-deep">深度解析</a>
+        <a href="/#section-faq">常见问答</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-mini">
+          <input type="text" id="searchInput" placeholder="搜索挑战名称…" aria-label="搜索挑战名称">
+          <button id="searchBtn" aria-label="搜索">🔍</button>
+        </div>
+        <button class="btn-ghost">在线观看</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-main">
+        <div class="hero-badge">🔥 每日更新 · 主题挑战</div>
+        <h1>每日大赛主题大赛寸止挑战在线观看</h1>
+        <p>汇集各类主题挑战赛事与寸止挑战内容，按类型、难度和观看场景整理，提供清晰的分类索引与参赛参考。无论你是想找每日主题赛、了解寸止规则，还是寻找在线观看入口，都可以从这里开始。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="/#section-hot">浏览热门挑战 →</a>
+          <a class="btn-outline-light" href="/#section-intro">了解赛事规则</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-stat-card">
+          <span class="label">进行中挑战</span>
+          <span class="value">24 <small>场</small></span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="label">今日新增</span>
+          <span class="value">6 <small>场</small></span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="label">在线观看人数</span>
+          <span class="value">3.2k <small>人</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容区 -->
+  <div class="container main-layout">
+    <!-- 左栏 -->
+    <aside class="left-sidebar" aria-label="频道导航">
+      <div class="sidebar-block">
+        <div class="sidebar-title">频道导航</div>
+        <ul class="channel-list">
+          <li><a href="/#section-intro"><span class="dot"></span>赛事简介</a></li>
+          <li><a href="/#section-hot"><span class="dot"></span>热门挑战</a></li>
+          <li><a href="/#section-updates"><span class="dot"></span>最新动态</a></li>
+          <li><a href="/#section-categories"><span class="dot"></span>分类入口</a></li>
+          <li><a href="/#section-deep"><span class="dot"></span>深度解析</a></li>
+          <li><a href="/#section-guide"><span class="dot"></span>体验指南</a></li>
+          <li><a href="/#section-faq"><span class="dot"></span>常见问答</a></li>
+          <li><a href="/#section-comments"><span class="dot"></span>用户评论</a></li>
+          <li><a href="/#section-news"><span class="dot"></span>相关资讯</a></li>
+          <li><a href="/#section-related"><span class="dot"></span>相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-title">类型筛选</div>
+        <div class="filter-tags" id="typeFilters">
+          <button data-filter="all" class="active">全部</button>
+          <button data-filter="寸止">寸止挑战</button>
+          <button data-filter="主题">主题大赛</button>
+          <button data-filter="每日">每日赛</button>
+          <button data-filter="团队">团队赛</button>
+          <button data-filter="个人">个人赛</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <main class="center-content" id="mainContent">
+      <!-- 1. 内容简介 -->
+      <section class="content-section" id="section-intro">
+        <div class="section-header">
+          <h2 class="section-title">赛事简介与内容定位</h2>
+        </div>
+        <div class="intro-text">
+          <p><strong>每日大赛主题大赛寸止挑战在线观看</strong>是一个围绕短周期挑战赛事与主题竞赛搭建的内容索引页，面向关注每日赛程、主题创意和寸止挑战规则的观众与参与者。页面按照赛事类型、更新节奏和观看场景整理条目，方便快速定位感兴趣的内容方向，而不必在大量无关信息中反复翻找。</p>
+          <p>在内容组织上，页面将“每日大赛”理解为高频次、轻量化的日常挑战，“主题大赛”侧重有明确创作方向的竞赛单元，而“寸止挑战”则指向以节奏控制与临场判断为特点的挑战形式。三类内容各有侧重，但又共享相近的观看需求——用户通常希望快速知道今天有什么新挑战、规则是否变化、以及从哪里进入观看。页面围绕这些实际需求设置热门推荐、最新更新、分类入口与深度解析，帮助用户在一次浏览中完成从发现到理解的过渡。</p>
+          <p>对于刚开始接触此类挑战的观众，常见问题集中在规则理解与观看方式上；而对于持续关注的用户，更在意更新频率与赛程变化。页面在 FAQ 与体验指南板块分别回应这两类需求，并通过标签索引与相关推荐提供延伸路径。所有展示条目均以内容特征与类型标签为主要识别方式，不依赖单一榜单排序，方便不同偏好的用户按自己的节奏浏览。</p>
+        </div>
+      </section>
+
+      <!-- 2. 热门内容推荐 -->
+      <section class="content-section" id="section-hot">
+        <div class="section-header">
+          <h2 class="section-title">热门挑战推荐</h2>
+          <a class="section-more" href="/#section-related">查看更多 →</a>
+        </div>
+        <div class="card-grid" id="hotCardGrid">
+          <article class="content-card" data-type="寸止">
+            <div class="card-tags">
+              <span class="card-tag type">寸止挑战</span>
+              <span class="card-tag">节奏控制</span>
+              <span class="card-tag">限时</span>
+            </div>
+            <h3>寸止挑战·极限十秒反应赛</h3>
+            <p class="desc">选手需在极短时间内做出判断并停止动作，考验临场控制力与节奏感。适合喜欢紧张氛围的观众。</p>
+            <div class="card-meta"><span>🔥 热度 9.2k</span><span>⏱ 今日更新</span><span>👍 96%</span></div>
+          </article>
+          <article class="content-card" data-type="主题">
+            <div class="card-tags">
+              <span class="card-tag type">主题大赛</span>
+              <span class="card-tag">创意</span>
+              <span class="card-tag">团队协作</span>
+            </div>
+            <h3>主题大赛·城市光影创作赛</h3>
+            <p class="desc">以城市夜景为命题的限时创作挑战，参赛队伍需在指定时间内完成作品并提交展示。</p>
+            <div class="card-meta"><span>🔥 热度 7.8k</span><span>⏱ 2 天前</span><span>👍 92%</span></div>
+          </article>
+          <article class="content-card" data-type="每日">
+            <div class="card-tags">
+              <span class="card-tag type">每日赛</span>
+              <span class="card-tag">轻量</span>
+              <span class="card-tag">速看</span>
+            </div>
+            <h3>每日大赛·一分钟创意速赛</h3>
+            <p class="desc">每天更换一个小主题，参赛者在极短时间内完成展示，节奏轻快，适合碎片时间观看。</p>
+            <div class="card-meta"><span>🔥 热度 6.4k</span><span>⏱ 今日更新</span><span>👍 89%</span></div>
+          </article>
+          <article class="content-card" data-type="团队">
+            <div class="card-tags">
+              <span class="card-tag type">团队赛</span>
+              <span class="card-tag">协作</span>
+              <span class="card-tag">策略</span>
+            </div>
+            <h3>团队接力·寸止配合挑战赛</h3>
+            <p class="desc">多人接力完成寸止动作，强调团队默契与节奏衔接，观看过程有较强的悬念感。</p>
+            <div class="card-meta"><span>🔥 热度 5.9k</span><span>⏱ 1 天前</span><span>👍 94%</span></div>
+          </article>
+          <article class="content-card" data-type="个人">
+            <div class="card-tags">
+              <span class="card-tag type">个人赛</span>
+              <span class="card-tag">技巧</span>
+              <span class="card-tag">进阶</span>
+            </div>
+            <h3>个人技巧·寸止精准控制赛</h3>
+            <p class="desc">聚焦个人控制力与稳定性的挑战，动作难度逐轮提升，适合关注技术细节的观众。</p>
+            <div class="card-meta"><span>🔥 热度 5.1k</span><span>⏱ 3 天前</span><span>👍 91%</span></div>
+          </article>
+          <article class="content-card" data-type="主题">
+            <div class="card-tags">
+              <span class="card-tag type">主题大赛</span>
+              <span class="card-tag">叙事</span>
+              <span class="card-tag">故事感</span>
+            </div>
+            <h3>主题叙事·短篇挑战创作赛</h3>
+            <p class="desc">围绕给定关键词展开短篇创作，强调叙事完整度与创意表达，作品可在线上观看回放。</p>
+            <div class="card-meta"><span>🔥 热度 4.7k</span><span>⏱ 4 天前</span><span>👍 88%</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 / 热门动态 -->
+      <section class="content-section" id="section-updates">
+        <div class="section-header">
+          <h2 class="section-title">最新更新与赛程动态</h2>
+        </div>
+        <ul class="update-list" id="updateList">
+          <li><a class="update-name" href="/#section-hot">寸止挑战·极速判断赛</a><span class="update-summary">新增第三轮赛程，观看通道已开启</span><span class="update-time">今天 09:20</span></li>
+          <li><a class="update-name" href="/#section-hot">主题大赛·光影命题单元</a><span class="update-summary">公布本轮创作主题与提交截止时间</span><span class="update-time">今天 08:45</span></li>
+          <li><a class="update-name" href="/#section-hot">每日大赛·一分钟速赛</a><span class="update-summary">今日主题为“节奏与停顿”，可在线观看</span><span class="update-time">今天 07:30</span></li>
+          <li><a class="update-name" href="/#section-hot">团队接力·寸止配合赛</a><span class="update-summary">新增两组参赛队伍，赛程表同步更新</span><span class="update-time">昨天 18:10</span></li>
+          <li><a class="update-name" href="/#section-hot">个人技巧·控制力赛</a><span class="update-summary">动作难度调整说明已发布</span><span class="update-time">昨天 15:40</span></li>
+          <li><a class="update-name" href="/#section-hot">主题叙事·短篇创作赛</a><span class="update-summary">作品回放列表新增 4 条</span><span class="update-time">昨天 11:05</span></li>
+          <li><a class="update-name" href="/#section-hot">寸止挑战·限时反应赛</a><span class="update-summary">规则补充：增加一次暂停机会</span><span class="update-time">前天 20:30</span></li>
+          <li><a class="update-name" href="/#section-hot">每日大赛·创意速赛</a><span class="update-summary">本周主题排期已公布，可提前查看</span><span class="update-time">前天 14:15</span></li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="content-section" id="section-categories">
+        <div class="section-header">
+          <h2 class="section-title">按类型查找挑战</h2>
+        </div>
+        <div class="category-grid">
+          <a class="category-item" href="/#section-hot"><span class="category-icon">⚡</span><span>寸止挑战</span></a>
+          <a class="category-item" href="/#section-hot"><span class="category-icon">🎯</span><span>主题大赛</span></a>
+          <a class="category-item" href="/#section-hot"><span class="category-icon">📅</span><span>每日赛程</span></a>
+          <a class="category-item" href="/#section-hot"><span class="category-icon">👥</span><span>团队协作</span></a>
+          <a class="category-item" href="/#section-hot"><span class="category-icon">🕹️</span><span>个人技巧</span></a>
+          <a class="category-item" href="/#section-hot"><span class="category-icon">🎨</span><span>创意命题</span></a>
+          <a class="category-item" href="/#section-hot"><span class="category-icon">⏱️</span><span>限时挑战</span></a>
+          <a class="category-item" href="/#section-hot"><span class="category-icon">📺</span><span>在线观看</span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="content-section deep-dive" id="section-deep">
+        <div class="section-header">
+          <h2 class="section-title">深度解析：挑战类型与观看选择</h2>
+        </div>
+        <h3>每日大赛与主题大赛的区别</h3>
+        <p>每日大赛强调高频与轻量，通常每天更换一个小命题，单场时长较短，适合利用碎片时间快速浏览。主题大赛则围绕一个明确的创作方向展开，准备周期更长，参与者在命题范围内完成相对完整的作品或展示。对于观众来说，每日大赛更适合追更新、看新鲜创意，主题大赛更适合集中观看一轮完整赛程。</p>
+        <p>在每日大赛主题大赛寸止挑战在线观看的页面框架下，两类内容被放在同一索引体系中，但通过标签与分类加以区分。用户可以根据自己是想“随便看看今天有什么”还是“认真追一个主题单元”来选择入口，而不必在两类内容之间反复切换筛选。</p>
+        <h3>寸止挑战的规则要点与观看角度</h3>
+        <p>寸止挑战的核心在于“控制”与“时机”——参与者在规定条件下需要准确判断停止或切换的节点。不同场次会在难度、时长和允许的调整次数上有所变化，观看时留意规则说明可以更好理解选手的决策。常见的变化维度包括：</p>
+        <ul>
+          <li><strong>反应窗口</strong>：从提示出现到必须做出动作的时间长短，窗口越短，紧张感越强。</li>
+          <li><strong>容错次数</strong>：部分场次允许一次暂停或调整，部分场次零容错，这直接影响选手的策略选择。</li>
+          <li><strong>动作复杂度</strong>：动作越复杂，控制难度越高，但观赏性也随之提升。</li>
+          <li><strong>接力与个人</strong>：团队接力侧重配合衔接，个人赛更看重稳定发挥。</li>
+        </ul>
+        <p>如果刚开始接触寸止挑战，建议先从规则说明较短、容错次数较多的场次看起，再逐步过渡到节奏更紧的赛程。每日大赛主题大赛寸止挑战在线观看的页面中，相关标签会提示场次的特点，方便按需选择。</p>
+        <h3>在线观看的常见场景与选择建议</h3>
+        <p>观看这类挑战赛通常有三种场景：碎片时间快速浏览、固定时段追更、以及集中回看完整赛程。碎片浏览适合每日大赛的短场次，几分钟就能看完一轮；追更适合已经有固定偏好的主题大赛或团队赛；回看则适合想研究细节或补看错过的轮次。页面在推荐卡片与动态列表中标注了更新时间和时长特征，帮助用户按自己的时间安排选择。</p>
+        <p>另外，不同挑战的节奏差异较大。寸止类挑战的紧张感集中在关键节点，主题创作类挑战则更偏重过程展示。用户可以根据当下是想“提神”还是“放松”来决定点开哪一类内容。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="content-section" id="section-guide">
+        <div class="section-header">
+          <h2 class="section-title">浏览与观看指南</h2>
+        </div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>从分类入口快速定位</h4>
+              <p>左栏类型筛选与中栏分类入口提供按挑战类型、参与形式筛选的路径，适合已经明确想看某一类的用户。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>通过热门推荐发现新内容</h4>
+              <p>热门推荐卡片展示近期关注度较高的场次，每张卡片标注类型标签与简要看点，可作为发现入口。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>关注最新动态掌握赛程</h4>
+              <p>最新更新列表按时间排列，标注内容名称与变化摘要，适合用于追踪规则调整或新增场次。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>利用标签与相关推荐延伸</h4>
+              <p>页面底部的相关推荐标签按类型与场景组织，点击可跳转至对应板块，形成连续的浏览路径。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="content-section" id="section-faq">
+        <div class="section-header">
+          <h2 class="section-title">常见问答</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>每日大赛主题大赛寸止挑战在线观看适合什么人看？</summary>
+            <div class="faq-answer">适合关注短周期挑战赛事、对节奏控制类内容感兴趣，以及想找每日更新可看内容的用户。无论是快速浏览还是固定追更，都可以按分类和标签找到对应场次。</div>
+          </details>
+          <details class="faq-item">
+            <summary>寸止挑战一般多久更新一次？</summary>
+            <div class="faq-answer">寸止挑战相关场次的更新频率并不固定，通常随每日大赛或主题大赛的排期变化。页面会在最新动态中标注更新时间和变化摘要，方便查看近期是否有新场次或规则调整。</div>
+          </details>
+          <details class="faq-item">
+            <summary>主题大赛和每日大赛可以同时看吗？</summary>
+            <div class="faq-answer">可以。两类内容在同一页面中通过标签和分类区分，互不冲突。每日大赛偏轻量速看，主题大赛偏完整单元，用户可以根据时间安排分别选择。</div>
+          </details>
+          <details class="faq-item">
+            <summary>观看寸止挑战需要了解规则吗？</summary>
+            <div class="faq-answer">了解基本规则有助于理解选手的决策和场次节奏，但不是必须的。页面在深度解析板块整理了常见规则要点，初次观看可以先从容错次数较多、时长较短的场次入手。</div>
+          </details>
+          <details class="faq-item">
+            <summary>团队赛和个人赛哪个更值得看？</summary>
+            <div class="faq-answer">两者观赏角度不同。团队赛侧重配合与接力悬念，个人赛更聚焦技术细节与稳定性。可以根据自己更看重协作氛围还是个人表现来选择，热门推荐中也分别有对应场次。</div>
+          </details>
+          <details class="faq-item">
+            <summary>页面上的分类筛选怎么用？</summary>
+            <div class="faq-answer">左栏的类型筛选按钮可以按寸止挑战、主题大赛、每日赛、团队赛、个人赛等条件缩小浏览范围，点击后对应卡片会进行筛选显示，再次点击“全部”可恢复完整列表。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="content-section" id="section-comments">
+        <div class="section-header">
+          <h2 class="section-title">观众评论</h2>
+        </div>
+        <div class="comment-list">
+          <div class="comment-item"><div class="avatar-sm">林</div><div class="comment-body"><div class="comment-author">林间看客</div><div class="comment-text">寸止挑战的紧张感确实很足，尤其是十秒反应那场，看的时候自己也跟着屏住呼吸。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">陈</div><div class="comment-body"><div class="comment-author">陈小满</div><div class="comment-text">每日大赛的一分钟速赛很适合午休看，短平快，不用花太多时间。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">周</div><div class="comment-body"><div class="comment-author">周舟</div><div class="comment-text">主题大赛的光影命题那组作品质量不错，有几个思路挺有启发的。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">吴</div><div class="comment-body"><div class="comment-author">吴聊</div><div class="comment-text">团队接力的配合赛比想象中好看，交接节奏一乱就特别明显。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">郑</div><div class="comment-body"><div class="comment-author">郑在追</div><div class="comment-text">规则说明要是能再短一点就好了，有些场次看了半天才明白容错机制。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">孙</div><div class="comment-body"><div class="comment-author">孙不二</div><div class="comment-text">个人技巧赛的难度递进做得不错，逐轮看下来能感觉到选手的调整。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">李</div><div class="comment-body"><div class="comment-author">李子树</div><div class="comment-text">分类筛选挺方便的，直接点寸止挑战就能把其他类型过滤掉。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">赵</div><div class="comment-body"><div class="comment-author">赵四格</div><div class="comment-text">在线观看的回放加载有时候会慢一点，不过内容本身还是值得等。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">钱</div><div class="comment-body"><div class="comment-author">钱多多</div><div class="comment-text">希望每日大赛能增加一些周末特别场，平时时间太碎只能看一眼。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">王</div><div class="comment-body"><div class="comment-author">王不留行</div><div class="comment-text">寸止精准控制赛的细节回放很有教学感，适合想研究动作节奏的人。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">冯</div><div class="comment-body"><div class="comment-author">冯小刚</div><div class="comment-text">主题叙事短篇创作赛的作品差距有点大，好的很好，普通的比较普通。</div></div></div>
+          <div class="comment-item"><div class="avatar-sm">褚</div><div class="comment-body"><div class="comment-author">褚一鸣</div><div class="comment-text">最新动态更新还算及时，昨天规则调整今天就看到了说明。</div></div></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="content-section" id="section-news">
+        <div class="section-header">
+          <h2 class="section-title">相关资讯</h2>
+        </div>
+        <div class="news-list">
+          <div class="news-item"><div class="news-date">2025-03-18</div><div class="news-body"><h4>寸止挑战规则微调：反应窗口统一为三档</h4><p>新赛季对反应窗口的时长划分进行了统一，分为短、中、长三档，减少场次之间的理解成本。</p></div></div>
+          <div class="news-item"><div class="news-date">2025-03-16</div><div class="news-body"><h4>主题大赛新增“日常观察”命题单元</h4><p>下一轮主题大赛将围绕日常场景展开，鼓励参赛者从生活细节中提取创作素材。</p></div></div>
+          <div class="news-item"><div class="news-date">2025-03-14</div><div class="news-body"><h4>每日大赛排期调整：周末场次延长</h4><p>为方便周末观看，部分每日赛场的展示时间适当延长，单场内容量略有增加。</p></div></div>
+          <div class="news-item"><div class="news-date">2025-03-11</div><div class="news-body"><h4>团队接力赛新增两支队伍确认参赛</h4><p>新加入的队伍在配合训练上投入较多，预计会给接力赛环节带来新的节奏变化。</p></div></div>
+          <div class="news-item"><div class="news-date">2025-03-08</div><div class="news-body"><h4>个人技巧赛完成首轮难度评级</h4><p>首轮动作难度完成分级，后续场次将根据评级逐步调整，避免难度跳跃过大。</p></div></div>
+          <div class="news-item"><div class="news-date">2025-03-05</div><div class="news-body"><h4>在线观看回放功能优化加载速度</h4><p>回放列表的加载方式做了调整，连续观看多个场次时的等待时间有所缩短。</p></div></div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="content-section" id="section-related">
+        <div class="section-header">
+          <h2 class="section-title">按内容方向推荐</h2>
+        </div>
+        <div class="related-tags">
+          <a href="/#section-hot">寸止挑战限时反应赛</a>
+          <a href="/#section-hot">主题大赛城市光影命题</a>
+          <a href="/#section-hot">每日大赛一分钟速赛</a>
+          <a href="/#section-hot">团队接力配合挑战</a>
+          <a href="/#section-hot">个人技巧精准控制</a>
+          <a href="/#section-hot">主题叙事短篇创作</a>
+          <a href="/#section-hot">寸止规则入门场次</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="right-sidebar" aria-label="辅助阅读">
+      <div class="sidebar-block">
+        <div class="sidebar-title">页面目录</div>
+        <ul class="toc-list">
+          <li><a href="/#section-intro">赛事简介</a></li>
+          <li><a href="/#section-hot">热门挑战推荐</a></li>
+          <li><a href="/#section-updates">最新更新动态</a></li>
+          <li><a href="/#section-categories">分类入口</a></li>
+          <li><a href="/#section-deep">深度解析</a></li>
+          <li><a href="/#section-guide">体验指南</a></li>
+          <li><a href="/#section-faq">常见问答</a></li>
+          <li><a href="/#section-comments">用户评论</a></li>
+          <li><a href="/#section-news">相关资讯</a></li>
+          <li><a href="/#section-related">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-title">热门条目</div>
+        <ul class="hot-list">
+          <li><span class="rank">01</span><a class="hot-title" href="/#section-hot">寸止挑战·极限十秒反应赛</a><span class="hot-count">9.2k</span></li>
+          <li><span class="rank">02</span><a class="hot-title" href="/#section-hot">主题大赛·城市光影创作赛</a><span class="hot-count">7.8k</span></li>
+          <li><span class="rank">03</span><a class="hot-title" href="/#section-hot">每日大赛·一分钟创意速赛</a><span class="hot-count">6.4k</span></li>
+          <li><span class="rank">04</span><a class="hot-title" href="/#section-hot">团队接力·寸止配合挑战赛</a><span class="hot-count">5.9k</span></li>
+          <li><span class="rank">05</span><a class="hot-title" href="/#section-hot">个人技巧·寸止精准控制赛</a><span class="hot-count">5.1k</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-title">延伸阅读</div>
+        <ul class="toc-list">
+          <li><a href="/#section-deep">每日大赛与主题大赛的区别</a></li>
+          <li><a href="/#section-deep">寸止挑战规则要点</a></li>
+          <li><a href="/#section-deep">在线观看场景建议</a></li>
+          <li><a href="/#section-faq">刚接触先看哪类场次</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="margin-bottom:8px;">
+            <div class="brand-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M10 22L16 8l6 14h-3l-3-7-3 7z" fill="#fbbf24"/></svg></div>
+            <span class="brand-text">每日大赛主题大赛寸止挑战在线观看</span>
+          </div>
+          <p>围绕每日挑战、主题竞赛与寸止挑战的内容索引页，按类型、场景与更新节奏整理条目，方便浏览与选择。</p>
+        </div>
+        <div class="footer-col">
+          <h5>内容板块</h5>
+          <ul>
+            <li><a href="/#section-intro">赛事简介</a></li>
+            <li><a href="/#section-hot">热门挑战</a></li>
+            <li><a href="/#section-updates">最新动态</a></li>
+            <li><a href="/#section-categories">分类入口</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>阅读帮助</h5>
+          <ul>
+            <li><a href="/#section-deep">深度解析</a></li>
+            <li><a href="/#section-guide">体验指南</a></li>
+            <li><a href="/#section-faq">常见问答</a></li>
+            <li><a href="/#section-related">相关推荐</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>互动与资讯</h5>
+          <ul>
+            <li><a href="/#section-comments">用户评论</a></li>
+            <li><a href="/#section-news">相关资讯</a></li>
+            <li><a href="/#section-hot">热门条目</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 每日大赛主题大赛寸止挑战在线观看 · 内容索引示例页</span>
+        <span>部分内容为示例数据，仅用于展示页面结构</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      // 类型筛选
+      const filterButtons = document.querySelectorAll('#typeFilters button');
+      const cards = document.querySelectorAll('#hotCardGrid .content-card');
+      const noResult = document.createElement('div');
+      noResult.className = 'no-result';
+      noResult.textContent = '没有找到匹配的挑战，请尝试其他类型。';
+      document.getElementById('hotCardGrid').after(noResult);
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+          let visibleCount = 0;
+          cards.forEach(card => {
+            if (filter === 'all' || card.dataset.type === filter) {
+              card.style.display = '';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+          noResult.style.display = visibleCount === 0 ? 'block' : 'none';
+        });
+      });
+
+      // 搜索
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const updateItems = document.querySelectorAll('#updateList li');
+
+      function doSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (!query) {
+          updateItems.forEach(item => item.style.display = '');
+          noResult.style.display = 'none';
+          return;
+        }
+        let found = 0;
+        updateItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(query)) {
+            item.style.display = '';
+            found++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        // 同时过滤热门卡片
+        let cardFound = 0;
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (text.includes(query)) {
+            card.style.display = '';
+            cardFound++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        noResult.style.display = (found === 0 && cardFound === 0) ? 'block' : 'none';
+      }
+
+      searchBtn.addEventListener('click', doSearch);
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') doSearch();
+      });
+    })();
+  </script>
+</body>
+            </html>
